@@ -18,11 +18,6 @@ h1{
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;   
     /* text-align: center; */
 }
-.card{
-    margin: 4%;
-    border-width: 3px;
-    border-color: hsl(0, 0%, 0%);
-}
 .navbar{
     display: inline;
     width: 50px;
@@ -36,4 +31,50 @@ h1{
     position: absolute;
     left: 10px;
     width: 15%;
+}
+.card{
+    margin: 0 auto;
+    padding: 10px;
+    width: 500px;
+    position: relative;
+    text-align: center;
+    border-radius: 10px;
+    /* border-width: 3px;
+    border-color: hsl(0, 0%, 0%); */
+}
+
+@property --angle{
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+.card::after, .card::before{
+    content: '';
+
+    position: absolute;
+    height: 125%;
+    width: 105%;
+    background-image: conic-gradient(from var(--angle),transparent, blue, red, green, blue);
+    z-index: -1;
+    padding: 0px;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    border-radius: 5px;
+    animation: 3s spin linear infinite;
+}
+
+.card::before{
+    filter: blur(2rem);
+    opacity: 0.75;
+
+}
+@keyframes spin {
+    from{
+        --angle: 0deg;
+
+    }to{
+        --angle: 360deg;
+
+    }
 }
