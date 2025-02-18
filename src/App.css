@@ -1,0 +1,39 @@
+.card-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    text-align: center;
+    margin-top: 5%;
+    max-width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    /* font-family:; */
+    border-color: black;
+    border-width: 10px;
+}
+h1{
+    text-align: center;
+    font-size: 800%;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;   
+    /* text-align: center; */
+}
+.card{
+    margin: 4%;
+    border-width: 3px;
+    border-color: hsl(0, 0%, 0%);
+}
+.navbar{
+    display: inline;
+    width: 50px;
+}
+.top{
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+.image{
+    position: absolute;
+    left: 10px;
+    width: 15%;
+}
